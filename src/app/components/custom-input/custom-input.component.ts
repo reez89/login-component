@@ -17,9 +17,6 @@ import { InputField } from 'src/app/models/input-field';
 export class CustomInputComponent implements ControlValueAccessor {
 
   @Input()
-  inputs: InputField[] = [];
-
-  @Input()
   id!: string;
 
   @Input()
@@ -28,11 +25,6 @@ export class CustomInputComponent implements ControlValueAccessor {
   private _type!: string;
   private _placeholder!: string;
   private _val!: string;
-  private _formControlName!: string;
-
-  public get formControlName(): string {
-    return this._formControlName;
-  }
 
   public get placeholder(): string {
     return this._placeholder;
@@ -56,14 +48,9 @@ export class CustomInputComponent implements ControlValueAccessor {
     value !== undefined ? this._placeholder = value : '';
   }
 
-  @Input()
-  public set formControlName( value: string ) {
-    this._formControlName = value;
-  }
-
   onChanged: any = () => {};
   onTouched: any = () => {};
-
+ 
   public set val( value ) {
     this._val = value;
     this.onChanged( value );
