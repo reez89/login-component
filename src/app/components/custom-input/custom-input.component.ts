@@ -66,8 +66,8 @@ export class CustomInputComponent implements ControlValueAccessor {
 
   public set val( value ) {
     this._val = value;
-    this.onTouched();
     this.onChanged( value );
+    this.onTouched();
   }
 
   writeValue( obj: any ): void {

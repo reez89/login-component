@@ -67,7 +67,7 @@ export class RegistrationComponent {
     //add your action here
     const password = this.form.get( 'password' )?.value;
     const confirmedPassword = this.form.get( 'confirmPassword' )?.value;
-    //password validation
+    //password simple validation
     if ( confirmedPassword === password ) {
       console.log( this.form.value );
     }
