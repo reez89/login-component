@@ -1,0 +1,36 @@
+
+<ng-container [ngSwitch]="type">
+    <ng-container *ngSwitchCase="'text'">
+        <input 
+            [(ngModel)]="val" 
+            [placeholder]="placeholder"
+            type="text" 
+            class="appearance-none rounded-none relative block w-full px-3 py-2 border border-gray-300 placeholder-gray-500 text-gray-900 rounded-t-md focus:outline-none focus:ring-indigo-500 focus:border-indigo-500 focus:z-10 sm:text-sm" placeholder="Email address"
+            [id]="id"
+            [name]="name"
+            >
+    </ng-container>
+    <ng-container *ngSwitchCase="'password'">
+        <input 
+            [(ngModel)]="val"
+            [placeholder]="placeholder"
+            type="password" 
+            class="appearance-none rounded-none relative block w-full px-3 py-2 border border-gray-300 placeholder-gray-500 text-gray-900 rounded-b-md focus:outline-none focus:ring-indigo-500 focus:border-indigo-500 focus:z-10 sm:text-sm" placeholder="Password">
+    </ng-container>
+    <ng-container *ngSwitchCase="'email'">
+        <input 
+            [(ngModel)]="val"
+            [placeholder]="placeholder"
+            type="email" 
+            class="appearance-none rounded-none relative block w-full px-3 py-2 border border-gray-300 placeholder-gray-500 text-gray-900 rounded-b-md focus:outline-none focus:ring-indigo-500 focus:border-indigo-500 focus:z-10 sm:text-sm" placeholder="Password">
+    </ng-container>
+    <ng-container *ngSwitchCase="'checkbox'">
+        <div  class="flex items-center mt-2">
+            <input 
+            [(ngModel)]="val"
+            type="checkbox" 
+            class="h-4 w-4  text-indigo-600 focus:ring-indigo-500 border-gray-300 rounded">
+            <label for="remember-me" class="ml-2 block text-sm text-gray-900"> {{placeholder}} </label>
+        </div> 
+    </ng-container>
+</ng-container>
